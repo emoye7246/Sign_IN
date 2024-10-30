@@ -1,0 +1,59 @@
+body{
+
+    margin: 0px;
+    width: 100vw;
+    display: flex;
+}
+
+#brand {
+    display: flex;
+    border: 4px solid black;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    background-image: url('/Users/elijahmoye/Desktop/validation/Sign_IN/src/images/background.gif');
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#logo {
+
+    align-items: center;
+    font-size: 50px;
+    color: darkblue;
+    border: 5px solid black;
+    background-color: cornflowerblue;
+    justify-content: center;
+    display: flex;
+}
+
+#validation {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+#login-page{
+
+    display: flex;
+    flex-direction: column;
+    /* width: 00px; */
+    align-items: center;
+    height: 200px;
+    justify-content: space-around;
+}
+
+#Welcome{
+    font-size: 59px;
+}
+
+#buttons {
+
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+}
