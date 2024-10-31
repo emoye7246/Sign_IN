@@ -15,7 +15,6 @@
     <div id="validation">
 
         <div id="login-page">
-
             <div id="Welcome">Welcome</div>
 
             <div id="buttons">
@@ -26,9 +25,43 @@
             </div>
         </div>
 
+        
 
-        <div id="formsContent" >
-            <form novalidate></form>
+
+        <div id="formsContent" style="display: none;">
+
+            <h2>Sign Up Below</h2>
+            <form id="form"   action="">
+
+                <div id="names">
+
+                    <label for="first_Name">First Name:</label>
+                    <input type="text" id="first_Name" placeholder="John" required>
+
+                    <label for="last_Name">Last Name:</label>
+                    <input type="text" id="last_Name" placeholder="Doe" required>
+
+                </div>
+
+                <div id="contact">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="number">Phone Number:</label>
+                    <input type="tel" id="number" placeholder="optional">
+                </div>
+
+                <div id="password">
+
+                    
+                </div>
+
+                <button id="sumbit">Sumbit</button>
+
+            </form>
+
+            <div>Already Have an Account? Sign in Here</div>
         </div>
         
     </div>

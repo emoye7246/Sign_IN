@@ -57,3 +57,46 @@ body{
     width: 200px;
     justify-content: space-around;
 }
+
+#form{
+
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formsContent {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 548px;
+    align-items: center;
+}
+
+#names, #contact, #password{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    width: 600px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#first_Name:valid{
+
+    border: 1px solid green;
+}
+
+
+/* stlyes */
+
+
+input{
+
+    border-radius: 6px;
+}
