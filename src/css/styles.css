@@ -12,6 +12,7 @@ body{
     width: 50vw;
     display: flex;
     background-image: url('/Users/elijahmoye/Desktop/validation/Sign_IN/src/images/background.gif');
+    background-size: cover;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -87,16 +88,34 @@ body{
 
 }
 
-#first_Name:valid{
+#asterik{
+
+    color: red;
+}
+
+#names > input:user-invalid, #password > input:user-invalid {
+
+    border: 1px solid red;
+}
+
+#names > input:valid, #password > input:valid{
+    border: 1px solid green;
+
+}
+
+
+#email:valid{
 
     border: 1px solid green;
 }
+
+#email:user-invalid{
+
+    border: 1px solid red;
+}
+
 
 
 /* stlyes */
 
 
-input{
-
-    border-radius: 6px;
-}
