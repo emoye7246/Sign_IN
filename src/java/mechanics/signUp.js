@@ -1,6 +1,5 @@
 export function createSignUp(){
     
-    let inputs = document.querySelectorAll('input')
 
     let loginPage = document.getElementById('login-page')
     loginPage.style.display = 'none'
@@ -47,6 +46,9 @@ export function createSignUp(){
     
     let sumbit = document.getElementById('sumbit')
 
+    let inputs = document.querySelectorAll('input')
+
+
     sumbit.addEventListener('click', function(event){
 
         inputs.forEach((element) => {
@@ -56,6 +58,7 @@ export function createSignUp(){
                 element.style.border = '1px solid red'
             }
         })
+
 
         if(createPasswordInput.value.toString() == confirmPasswordInput.value.toString()){
 
