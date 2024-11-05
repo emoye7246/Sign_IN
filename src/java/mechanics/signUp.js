@@ -4,17 +4,13 @@ export function createSignUp(){
     let loginPage = document.getElementById('login-page')
     loginPage.style.display = 'none'
 
-    let form = document.getElementById('form')
-
 
     let formsContent = document.getElementById('formsContent')
     formsContent.style.display = 'flex'
 
-    let password = document.getElementById('password')
+    let createPasswordId = document.getElementById('createPassword')
 
-    let createPasswordAsterik = document.createElement('div')
-    createPasswordAsterik.innerHTML = `*`
-    createPasswordAsterik.id = 'asterik'
+    let confirmPasswordId = document.getElementById('confirmPassword')
 
     let createPassword = document.createElement('label')
     createPassword.innerHTML = 'Create Password: '
@@ -23,10 +19,6 @@ export function createSignUp(){
     let createPasswordInput = document.createElement('input')
     createPasswordInput.id = 'passwordCreate'
     createPasswordInput.required = true
-
-    let confirmPasswordAsterik = document.createElement('div')
-    confirmPasswordAsterik.innerHTML = '*'
-    confirmPasswordAsterik.id = 'asterik'
  
     let confirmPassword = document.createElement('label')
     confirmPassword.innerHTML = 'Confirm Password: '
@@ -37,50 +29,36 @@ export function createSignUp(){
     confirmPasswordInput.id = 'confirmPassword'
     confirmPasswordInput.required = true
 
-    let errorMessage = document.createElement('div')
     
- 
-    password.append(createPasswordAsterik, createPassword, createPasswordInput, confirmPasswordAsterik, confirmPassword, confirmPasswordInput)
+    createPasswordId.append(createPassword, createPasswordInput)
+
+    confirmPasswordId.append(confirmPassword, confirmPasswordInput)
 
 
-    
-    let sumbit = document.getElementById('sumbit')
+    formValid(createPasswordInput, confirmPasswordInput)
 
-    let inputs = document.querySelectorAll('input')
-
-
-    sumbit.addEventListener('click', function(event){
-
-        inputs.forEach((element) => {
-
-            if(element.checkValidity() == false){
-
-                element.style.border = '1px solid red'
-            }
-        })
+}
 
 
-        if(createPasswordInput.value.toString() == confirmPasswordInput.value.toString()){
+function formValid(checkPasswordOne, checkPasswordTwo){
 
-                console.log('values match')
+    let submit = document.getElementById('submit')
+
+    submit.addEventListener('click', function(event){
+
+        if(checkPasswordOne.value.trim() != checkPasswordTwo.value.trim()){
+
+            event.preventDefault()
+            console.log('works')
 
         }
+        else if(checkPasswordOne.value == checkPasswordTwo.value){
 
-
-        else if(createPasswordInput.value.toString() != confirmPasswordInput.value.toString()){
-    
-    
-                event.preventDefault()  
-                
-                errorMessage.innerHTML = ' '
-                errorMessage.innerHTML = 'Passwords Do not match'
-                errorMessage.style.color = 'red'
-                
-
-
-                form.insertBefore(errorMessage, sumbit)
+            console.log('works')
         }
     })
 
 }
+
+
 // Passed

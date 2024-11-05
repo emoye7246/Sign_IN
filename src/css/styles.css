@@ -63,9 +63,10 @@ body{
 
     display: flex;
     justify-content: space-between;
-    width: 600px;
     flex-direction: column;
     align-items: center;
+    height: 300px;
+
 }
 
 #formsContent {
@@ -78,45 +79,32 @@ body{
     align-items: center;
 }
 
-#names, #contact, #password{
+
+.pos{
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+#names, #contact, #passwords {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    width: 600px;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 350px;
+    justify-content: space-between;
 
 }
 
-#asterik{
+input{
 
-    color: red;
+    width: 150px;
+    height: 20px;
 }
 
-#names > input:user-invalid, #password > input:user-invalid {
+label {
 
-    border: 1px solid red;
-}
-
-#names > input:valid, #password > input:valid{
-    border: 1px solid green;
 
 }
-
-
-
-#email:valid{
-
-    border: 1px solid green;
-}
-
-#email:user-invalid{
-
-    border: 1px solid red;
-}
-
-
-
 /* stlyes */
 
 
