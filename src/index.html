@@ -40,7 +40,7 @@
                     <div class="pos">
 
                         <label for="first_Name">First Name:</label>
-                        <input type="text" id="first_Name" placeholder="John" required>
+                        <input type="text" id="first_Name" placeholder="John" required autocomplete="off" >
 
                     </div>
 
@@ -72,9 +72,35 @@
 
                 <div id="passwords">
 
-                        <div class="pos" id="createPassword"></div>
+                        <div class="pos" id="createPassword">
 
-                        <div class="pos" id="confirmPassword"></div>
+                            <label for="newPassword">Create Password</label>
+                            <input type="text" id="newPassword" required autocomplete="off">
+
+                           <div id="rules">
+
+                                    <div id="special">Must Include special character</div>
+                                    <div id="characterCount">Must be a min of 4 characters</div>
+                                    <div id="searchNumber">Must include atleast 1 number</div>
+                                    <div id="upperCase">Must include one Uppercase Letter</div>
+                           </div>
+
+                        </div>
+
+
+                        <div class="pos" id="confirmPassword">
+
+                            <label for="confirmPasswords">Confirm Password</label>
+                            <input type="text" id="confirmPasswords" required autocomplete="off"> 
+
+                            <ul id="rules">
+
+
+                            </ul>
+
+
+
+                        </div>
 
                     
                 </div>
