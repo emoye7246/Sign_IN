@@ -4,6 +4,7 @@ let newPassword = document.getElementById('newPassword')
 let confirmPasswords = document.getElementById('confirmPasswords')
 let submit = document.getElementById('submit')
 let inputs = document.querySelectorAll('input')
+let error = document.getElementById('error')
 
 export function createSignUp(){
     
@@ -52,6 +53,9 @@ function checkPassword(){
     else{
 
         event.preventDefault()
+        error.style.display = 'flex'
+        error.style.color = 'red'
+        newPassword.style.border = '1px solid red'
         
         
     }
@@ -65,9 +69,13 @@ function checkPassword(){
     else{
 
         event.preventDefault()
+        error.style.display = 'flex'
+        error.style.color = 'red'
+        newPassword.style.border = '1px solid red'
+
 
     }
-    
+
     //  Atleast one number
     
     if(newPassword.value.trim().match(/[0-9]/)){
@@ -79,6 +87,10 @@ function checkPassword(){
     else{
 
         event.preventDefault()
+        error.style.display = 'flex'
+        error.style.color = 'red'
+        newPassword.style.border = '1px solid red'
+
 
     }
 
@@ -92,6 +104,10 @@ function checkPassword(){
     else{
 
         event.preventDefault()
+        error.style.display = 'flex'
+        error.style.color = 'red'
+        newPassword.style.border = '1px solid red'
+
 
     }
 
@@ -105,6 +121,10 @@ function checkPassword(){
     else{
 
         event.preventDefault()
+        error.style.display = 'flex'
+        error.style.color = 'red'
+        newPassword.style.border = '1px solid red'
+
 
     }
     

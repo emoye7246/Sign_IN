@@ -114,11 +114,23 @@ input:valid{
     border: 1px solid black;
 }
 
+#numbers::before{
+
+    content: none;
+}
+
+
 #rules > div {
 
     color: lightgray;
 }
 
+
+label::before {
+
+    content: "*";
+    color: red;
+}
 
 
 
