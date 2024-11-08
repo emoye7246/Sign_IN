@@ -1,3 +1,10 @@
+import { displayValidation } from "./styleValid"
+
+let newPassword = document.getElementById('newPassword')
+let confirmPasswords = document.getElementById('confirmPasswords')
+let submit = document.getElementById('submit')
+let inputs = document.querySelectorAll('input')
+
 export function createSignUp(){
     
 
@@ -8,98 +15,100 @@ export function createSignUp(){
     let formsContent = document.getElementById('formsContent')
     formsContent.style.display = 'flex'
 
+    newPassword.addEventListener('keyup', displayValidation)
+    confirmPasswords.addEventListener('keyup', displayValidation)
 
-    let submit = document.getElementById('submit')
-
-    let inputs = document.querySelectorAll('input')
-
-    let newPassword = document.getElementById('newPassword')
-    let confirmPasswords = document.getElementById('confirmPasswords')
-
-
-    newPassword.addEventListener('keyup', checkPassword)
-
-
-    submit.addEventListener('click', function(event){
-
-        inputs.forEach((element) => {
-
-            if(element.checkValidity() == false){
-
-                element.style.border = '1px solid red'
-            }
-        })
-
-        if(newPassword.value.trim() != confirmPasswords.value.trim()){
-
-            event.preventDefault()
-            console.log('works')
-
-        }
-        else if(newPassword.value == confirmPasswords.value){
-
-            console.log('works')
-        }
-    })
-
+    checkPassword()
 
 }
 
 function checkPassword(){
 
-    let newPassword = document.getElementById('newPassword')
+    submit.addEventListener('click', function(event){
+
+    inputs.forEach((element) => {
+
+            if(element.checkValidity() == false){
+
+                event.preventDefault()
+                element.style.border = '1px solid red'
+            }
+            else if(element.checkValidity() == true){
+
+                console.log('works')
+            }
+
+    })
 
 
-    let special = document.getElementById('special')
-    let characterCount = document.getElementById('characterCount')
-    let searchNumber = document.getElementById('searchNumber')
-    let upperCase = document.getElementById('upperCase')
-
+    // special character
 
     if(newPassword.value.trim().match(/[^a-zA-Z0-9\s]/g)){
 
-        special.style.color = 'green'
+        newPassword.setCustomValidity('')
+
 
     }
     else{
 
-        special.style.color = 'lightgray'
+        event.preventDefault()
+        
         
     }
-    // special character
+
+    // character Count
 
     if(newPassword.value.trim().length >= 4 ){
 
-        characterCount.style.color = 'green'
+        newPassword.setCustomValidity('')
     }
     else{
 
-        characterCount.style.color = 'lightgray'
+        event.preventDefault()
+
     }
-    // character Count
+    
+    //  Atleast one number
     
     if(newPassword.value.trim().match(/[0-9]/)){
 
-        searchNumber.style.color = 'green'
+        newPassword.setCustomValidity('')
+
 
     }
     else{
 
-        searchNumber.style.color = 'lightgray'
+        event.preventDefault()
+
     }
-    //  Atleast one number
+
+    // Must Contain one Uppercase Letter
 
     if(newPassword.value.trim().match(/[A-Z]/)){
 
-        upperCase.style.color = 'green'
+        newPassword.setCustomValidity('')
+
     }
     else{
 
-        upperCase.style.color = 'lightgray'
+        event.preventDefault()
+
+    }
+
+    // Passwords Must Match
+
+    if(newPassword.value.trim() == confirmPasswords.value.trim()){
+
+        console.log('ok')
+
+    }
+    else{
+
+        event.preventDefault()
 
     }
     
-
+})
 
 }
 

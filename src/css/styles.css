@@ -119,32 +119,7 @@ input:valid{
     color: lightgray;
 }
 
-#rules > div:valid {
-
-    color: green;
-}
 
 
-/* Password requirements */
 
-#special:valid{
-
-    color: green;
-}
-
-#characterCount:valid{
-
-    color: green;
-}
-
-#searchNumber:valid{
-
-    color: green;
-}
-
-#upperCase:valid{
-
-    color: green;
-
-}
 
